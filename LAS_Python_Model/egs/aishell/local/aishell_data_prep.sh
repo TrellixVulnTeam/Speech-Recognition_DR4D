@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Copyright 2017 Xingyu Na
-# Apache 2.0
-
 . ./path.sh || exit 1;
 
 if [ $# != 2 ]; then
