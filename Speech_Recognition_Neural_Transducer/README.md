@@ -1,8 +1,8 @@
 # Online Speech recognition using RNN-Transducer
 
-Speech to text using RNN Transducer (Graves et al 2013 ) trained on 2000+ hours of audio speech data.
+Speech to text using RNN Transducer trained on 2000+ hours of audio speech data.
 
-This work is a joint collaboration with [**@w86763777**](http://github.com/w86763777)
+
 
 ## Highlights
 
@@ -196,12 +196,6 @@ For distributed training:
 python -m cli.lightning --config flagfiles/E4D1.txt
 ```
 
-If the learning rate and batch size is right, you should have a convergence curve as below after 24 hours of training.
-
-<p align="center">
-  <img width="100%" src="https://github.com/theblackcat102/Online-Speech-Recognition/raw/master/images/training_results.png" alt="convergence curve">
-</p>
-
 
 
 ## Datasets:
@@ -215,28 +209,6 @@ wget https://voice-prod-bundler-ee1969a6ce8178826482b88e843c335139bd3fb4.s3.amaz
 tar -zxvf en.tar.gz
 ```
 
-- Download english dataset from https://voice.mozilla.org/en/datasets
-
-- execute preprocess_common_voice.py to convert audio to 16k, PCM 16bits wav files ( this takes around 20 hours )
-
-### Youtube Caption : 118 hrs
-
-
-### Librispeech release 1 : 1000 hrs
-
-Download all the tar.gz files from [here](https://www.openslr.org/12/) and unzip files under a directory LibriSpeech, and point your flagfiles to each directory files
-
-check rnnt/args.py for the argument names
-
-### TEDLIUM: 118.05 hrs
-
-- Either download release 1 or 3 ( version 1 is smaller )
-
-```
-wget http://www.openslr.org/resources/51/TEDLIUM_release-3.tgz
-wget http://www.openslr.org/resources/51/TEDLIUM_release-1.tgz
-pip install git+https://github.com/mcfletch/sphfile.git
-```
 
 ### Data path
     ```
@@ -323,10 +295,3 @@ pip install git+https://github.com/mcfletch/sphfile.git
 
 - [x] Modify wraprnnt-pytorch to compatible with apex mixed precision
 
-## Reference
-
-* [Sequence Transduction with Recurrent Neural Networks](https://arxiv.org/abs/1211.3711)
-
-* [SPEECH RECOGNITION WITH DEEP RECURRENT NEURAL NETWORKS](https://arxiv.org/pdf/1303.5778.pdf)
-
-* [Awni implementation of transducer](https://github.com/awni/transducer)
