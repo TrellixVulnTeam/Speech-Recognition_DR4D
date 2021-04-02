@@ -4,27 +4,6 @@ Speech to text using RNN Transducer trained on 2000+ hours of audio speech data.
 
 
 
-## Highlights
-
-* First repo demonstrating online decoding capability of RNN Transducer (RNN-T)
-
-* Port RNN-T model to ONNX and OpenVINO
-
-* A large scale training on diverse voice datasets for RNN-T with apex and data parallel 
-
-Using this model we can run online speech recognition on Youtube Live video with ( 4 ~ 10 seconds faster than Youtube's caption ) on an 2.3GHz dual-core Intel Core i5 processor.
-
-
-<p align="center">
-  <img width="100%" src="https://github.com/theblackcat102/Online-Speech-Recognition/raw/master/images/demo-short.gif" alt="demo online decoding">
-</p>
-
-
-Visualize alignment of audio and text, similar to paper in Graves et al 2013.
-
-![visualize alignment](https://github.com/theblackcat102/Online-Speech-Recognition/raw/master/images/visualize.png)
-
-
 ## Speech recognition IRL ( in real life)
 
 Pretrained weights are now available in releases [v0.1](https://github.com/theblackcat102/Online-Speech-Recognition/releases/tag/v0.1)
